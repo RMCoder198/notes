@@ -2,8 +2,9 @@
 
 ## 1.8.0 (unreleased)
 
-* No changes yet
-
+* Add a saving status indicator
+* Update Notes icon to a SVG one.
+* Start the work around the context-menu for Sync
 
 ## 1.7.1 (2017-08-29)
 
