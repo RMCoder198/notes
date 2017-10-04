@@ -3,7 +3,7 @@ const formats = [
   'bold',
   'font',
   'italic',
-  'underline'
+  'underline',
   'size',
   'strike',
   'indent',
@@ -179,8 +179,8 @@ else
 
 const size = document.getElementsByClassName('ql-size')[0],
       bold = document.getElementsByClassName('ql-bold')[0],
-      underline =document.getElementsByClassName('ql-underline')[0],
       italic = document.getElementsByClassName('ql-italic')[0],
+      underline=document.getElementsByClassName('ql-underline')[0],
       strike = document.getElementsByClassName('ql-strike')[0],
       ordered = document.getElementsByClassName('ql-list')[0],
       bullet = document.getElementsByClassName('ql-list')[1];
@@ -356,8 +356,8 @@ function getPadStats() {
   const styles = {
     size: false,
     bold: false,
-    underline:false,
     italic: false,
+    underline:false,
     strike: false,
     list: false
   };
@@ -378,8 +378,8 @@ function getPadStats() {
     lineBreaks: (text.match(/\n/g) || []).length,
     usesSize: styles.size,
     usesBold: styles.bold,
-    usesUnderline:styles.underline,
     usesItalics: styles.italic,
+    usesUnderline:styles.underline,
     usesStrikethrough: styles.strike,
     usesList: styles.list
   };
