@@ -3,6 +3,7 @@ const formats = [
   'bold',
   'font',
   'italic',
+  'underline'
   'size',
   'strike',
   'indent',
@@ -178,6 +179,7 @@ else
 
 const size = document.getElementsByClassName('ql-size')[0],
       bold = document.getElementsByClassName('ql-bold')[0],
+      underline =document.getElementsByClassName('ql-underline')[0],
       italic = document.getElementsByClassName('ql-italic')[0],
       strike = document.getElementsByClassName('ql-strike')[0],
       ordered = document.getElementsByClassName('ql-list')[0],
@@ -187,6 +189,7 @@ const size = document.getElementsByClassName('ql-size')[0],
 size.title = browser.i18n.getMessage('fontSizeTitle');
 bold.title = browser.i18n.getMessage('boldTitle') + ' (' + userOSKey + '+B)';
 italic.title = browser.i18n.getMessage('italicTitle') + ' (' + userOSKey + '+I)';
+underline.title=browser.i18n.getMessage('underlineTitle')+'('+userOSKey+'+U)';
 strike.title = browser.i18n.getMessage('strikethroughTitle') + ' (' + userOSKey + '+Shift+' + bindings.strike.key + ')';
 ordered.title = browser.i18n.getMessage('numberedListTitle') + ' (' + userOSKey + '+Shift+' + bindings.ordered.key + ')';
 bullet.title = browser.i18n.getMessage('bulletedListTitle') + ' (' + userOSKey + '+Shift+' + bindings.bullet.key + ')';
@@ -353,7 +356,7 @@ function getPadStats() {
   const styles = {
     size: false,
     bold: false,
-
+    underline:false,
     italic: false,
     strike: false,
     list: false
@@ -375,6 +378,7 @@ function getPadStats() {
     lineBreaks: (text.match(/\n/g) || []).length,
     usesSize: styles.size,
     usesBold: styles.bold,
+    usesUnderline:styles.underline,
     usesItalics: styles.italic,
     usesStrikethrough: styles.strike,
     usesList: styles.list
